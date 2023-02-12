@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <title>My First Form</title>
+</head>
+<body>
+  <div class="content">
+    <div class="picture">
+      <div class="logo">
+        <img src="odin-lined.png" alt="Odin Project Logo">
+        <h2>The Odin Project</h2>
+    </div>
+    
+  </div>
+
+  <div class="right">
+    <div class="right_content">
+      <h3>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</h3>
+      <h3>You know you want to.</h3>
+    </div>
+
+    <div class="form_section">
+      <div class="form_content">
+        <p>Let's do this!</p>
+    </div>
+
+      <form>
+        <div class="input">
+          <label for="first_name">First Name</label>
+          <input type="text" id="first_name" placeholder="Bob" required>
+        </div>
+        
+        <div class="input">
+          <label for="last_name">Last Name</label>
+          <input type="text" id="last_name" placeholder="Smith" required>
+        </div>
+        
+        <div class="input">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="example@mail.com" required>
+        </div>
+
+        <div class="input">
+          <label for="phone_number">Phone Number</label>
+          <input type="tel" id="phone_number" placeholder="123-456-7890" required> 
+        </div>
+
+        <div class="input">
+          <label for="password">Password</label>
+          <input type="password" id="password" required>
+        </div>
+
+        <div class="input">
+          <label for="confirm_password">Confirm Password</label>
+          <input type="password" id="confirm_password" required>
+        </div>
+      </form>
+  </div>
+
+  <div class="submit_section">
+    <button type="submit" onclick="validatePassword()">Create Account</button>
+    <p>Already have an account? <a href="">Log In</a></p>
+  </div>
+  </div>
+
+  <!--Adding JavaScript - NOT WORKING - Returning true-->>
+  <script>
+    function validatePassword() {
+    const pw1 = document.getElementById('#password');
+    const pw2 = document.getElementById('#confirm_password');
+    if(pw1 != pw2) {
+      alert("Passwords do not match")
+    } 
+    else {
+      alert ("Password validation successful")
+    }
+  }
+  </script>
+</body>
+</html>
